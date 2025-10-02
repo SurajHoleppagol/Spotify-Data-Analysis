@@ -73,8 +73,8 @@ SELECT DISTINCT(channel) FROM spotify;
 
 SELECT DISTINCT(most_played_on) FROM spotify;
 ```
-**Analysis**
-**Easy Level**
+
+**Analysis Easy Level**
 
 **Q1 Retrieve the names of all tracks that have more than 1 billion streams.**
 
@@ -116,7 +116,7 @@ SELECT DISTINCT(most_played_on) FROM spotify;
 	GROUP BY artist;
 ```
 
-**Medium Level**
+**Analysis Medium Level**
 
 **Q6 Calculate the average danceability of tracks in each album.**
 
@@ -181,7 +181,7 @@ WHERE streamed_on_spotify>streamed_on_youtube
 		streamed_on_youtube <>0;
 ```
 
-**Advanced Level**
+**Analysis Advanced Level**
 
 **Q11 Find the top 3 most-viewed tracks for each artist using window functions.**
 
