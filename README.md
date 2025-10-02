@@ -1,6 +1,6 @@
 **Spotify Data Analysis Project**
 
-![Spotify Logo](spotify.JPG)
+![Spotify Logo](Spotify.JPG)
 
 **Project Overview**
 
