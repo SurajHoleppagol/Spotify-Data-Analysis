@@ -182,6 +182,7 @@ WHERE streamed_on_spotify>streamed_on_youtube
 ```
 
 **Advanced Level**
+
 **Q11 Find the top 3 most-viewed tracks for each artist using window functions.**
 
 ```sql
