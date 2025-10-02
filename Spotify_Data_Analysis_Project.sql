@@ -212,5 +212,5 @@ ORDER BY energy_diff DESC;
 		views,
 		likes,
 		SUM(likes) OVER(ORDER BY views DESC,track) AS cumulative_likes
-	FROM spotify
+	FROM spotify;
 
