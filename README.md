@@ -1,12 +1,12 @@
 **Spotify Data Analysis Project**
 
-![Spotify Logo](spotify.jpg)
+![Spotify Logo](spotify.JPG)
 
 **Project Overview**
 
--- **This project analyzes a Spotify dataset using PostgreSQL to derive insights into music streaming trends. It covers data cleaning, exploratory analysis, and advanced SQL queries including window functions, CTEs, and aggregations.**
+- **This project analyzes a Spotify dataset using PostgreSQL to derive insights into music streaming trends. It covers data cleaning, exploratory analysis, and advanced SQL queries including window functions, CTEs, and aggregations.**
 
-**The aim is to simulate real-world data analytics tasks and demonstrate SQL proficiency for a Data Analyst portfolio.**
+- **The aim is to simulate real-world data analytics tasks and demonstrate SQL proficiency for a Data Analyst portfolio.**
 
 **Create Table**
 
@@ -252,7 +252,7 @@ ORDER BY energy_diff DESC;
 		SUM(likes) OVER(ORDER BY views DESC,track) AS cumulative_likes
 	FROM spotify
 ```	
-## Spotify Data Analysis – Key Insights
+## Spotify Data Analysis Project – Key Insights
 
 - **Global Hit Tracks**
     - **385 tracks have crossed 1 billion streams, showing their massive global popularity and dominance on streaming platforms.**
