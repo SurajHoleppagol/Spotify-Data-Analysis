@@ -1,4 +1,4 @@
-**Spotify Data Analysis Project**
+# Spotify Data Analysis Project
 
 ![Spotify Logo](spotify.JPG)
 
@@ -253,6 +253,73 @@ ORDER BY energy_diff DESC;
 		SUM(likes) OVER(ORDER BY views DESC,track) AS cumulative_likes
 	FROM spotify
 ```	
+
+**Query Optimization Technique**
+
+- **To enhance query performance in the Spotify Data Analysis Project, we applied a systematic optimization process as outlined below:**
+
+```sql
+EXPLAIN ANALYZE
+	SELECT 
+		artist,
+		track,
+		views
+	FROM spotify
+	WHERE artist = 'Gorillaz'
+		AND
+		most_played_on = 'Spotify'
+	ORDER BY stream DESC LIMIT 25
+```
+
+- **1. Initial Query Performance Analysis (EXPLAIN)**
+
+- **First evaluated the query performance using the EXPLAIN function.**
+
+- **The query retrieved tracks based on the artist column, with the following metrics:**
+
+- **Before Optimization**
+	- **Planning Time: 0.360ms**
+	- **Execution Time: 10.921ms**
+
+- Below is the **screenshot** of the `EXPLAIN` result before optimization:
+      ![Analysis Before Index](Analysis_Before_Optimization.JPG)
+	![Query Plan Before Index](Query_Plan_Before_Optimization.JPG)
+	
+- **Graphical view (Before Optimization):**
+
+	![Graphical Before Index](Graphical_Before_Optimization.JPG)
+	  
+
+- **2. Index Creation on the artist Column**
+
+	- **To optimize retrieval speed, we created an index on the artist column.**
+
+	- **Indexing allows the database to quickly locate rows without scanning the entire table.**
+
+```sql
+CREATE INDEX artist_idx ON spotify(artist);
+```
+
+- **3. Performance Analysis After Indexing**
+
+	- **After applying the index, re-ran the same query and observed a significant performance boost:**
+
+- **After Optimization**
+	- **Planning Time: 0.434ms**
+	- **Execution Time: 0.573ms**
+
+- Below is the **screenshot** of the `EXPLAIN` result after optimization:
+      ![Analysis Before Index](Analysis_After_Optimization.JPG)
+
+	  ![Query Plan Before Index](Query_Plan_After_Optimization.JPG)
+
+- **Graphical view (After Optimization):**
+	  ![Graphical Before Index](Graphical_After_Optimization.JPG)
+
+## Conclusion:
+
+- **This optimization demonstrates how indexing can drastically reduce query execution time, leading to more efficient and scalable database operations in the Spotify Data Analysis Project.**
+
 ## Spotify Data Analysis Project – Key Insights
 
 - **Global Hit Tracks**
@@ -266,3 +333,5 @@ ORDER BY energy_diff DESC;
 
 - **Platform Preference Trends**
     - **On average, Spotify streams exceed YouTube views for newer artists, indicating a trend where listeners prefer Spotify for recent releases.**
+
+
