@@ -285,11 +285,11 @@ EXPLAIN ANALYZE
   
       ![Analysis Before Index](Analysis_Before_Optimization.JPG)
   
-	![Query Plan Before Index](Query_Plan_Before_Optimization.JPG)
+	![Query Plan Before Index](images/Query_Plan_Before_Optimization.JPG)
 	
 - **Graphical view (Before Optimization):**
 
-	![Graphical Before Index](Graphical_Before_Optimization.JPG)
+	![Graphical Before Index](images/Graphical_Before_Optimization.JPG)
 	  
 
 - **2. Index Creation on the artist Column**
@@ -312,13 +312,13 @@ CREATE INDEX artist_idx ON spotify(artist);
 
 - Below is the **screenshot** of the `EXPLAIN` result after optimization:
 - 
-      ![Analysis Before Index](Analysis_After_Optimization.JPG)
+      ![Analysis Before Index](images/Analysis_After_Optimization.JPG)
 
-	  ![Query Plan Before Index](Query_Plan_After_Optimization.JPG)
+	  ![Query Plan Before Index](images/Query_Plan_After_Optimization.JPG)
 
 - **Graphical view (After Optimization):**
   
-	  ![Graphical Before Index](Graphical_After_Optimization.JPG)
+	  ![Graphical Before Index](images/Graphical_After_Optimization.JPG)
 
 ## Conclusion:
 
