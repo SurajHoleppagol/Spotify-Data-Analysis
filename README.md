@@ -283,7 +283,7 @@ EXPLAIN ANALYZE
 
 - Below is the **screenshot** of the `EXPLAIN` result before optimization:
   
-      ![Analysis Before Index](Analysis_Before_Optimization.JPG)
+    ![Analysis Before Optimization](images/Analysis_Before_Optimization.jpg)
   
 	![Query Plan Before Index](images/Query_Plan_Before_Optimization.JPG)
 	
