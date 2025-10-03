@@ -282,7 +282,9 @@ EXPLAIN ANALYZE
 	- **Execution Time: 10.921ms**
 
 - Below is the **screenshot** of the `EXPLAIN` result before optimization:
+  
       ![Analysis Before Index](Analysis_Before_Optimization.JPG)
+  
 	![Query Plan Before Index](Query_Plan_Before_Optimization.JPG)
 	
 - **Graphical view (Before Optimization):**
@@ -309,11 +311,13 @@ CREATE INDEX artist_idx ON spotify(artist);
 	- **Execution Time: 0.573ms**
 
 - Below is the **screenshot** of the `EXPLAIN` result after optimization:
+- 
       ![Analysis Before Index](Analysis_After_Optimization.JPG)
 
 	  ![Query Plan Before Index](Query_Plan_After_Optimization.JPG)
 
 - **Graphical view (After Optimization):**
+  
 	  ![Graphical Before Index](Graphical_After_Optimization.JPG)
 
 ## Conclusion:
