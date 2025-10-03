@@ -312,7 +312,7 @@ CREATE INDEX artist_idx ON spotify(artist);
 
 - Below is the **screenshot** of the `EXPLAIN` result after optimization:
 - 
-      ![Analysis Before Index](screenshots/Analysis_After_Optimization.jpg)
+  ![Analysis Before Index](screenshots/Analysis_After_Optimization.jpg)
 
 	 ![Query Plan Before Index](screenshots/Query_Plan_After_Optimization.jpg)
 
