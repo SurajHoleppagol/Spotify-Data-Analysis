@@ -214,3 +214,29 @@ ORDER BY energy_diff DESC;
 		SUM(likes) OVER(ORDER BY views DESC,track) AS cumulative_likes
 	FROM spotify;
 
+-- Query Optimization
+
+EXPLAIN ANALYZE
+	SELECT 
+		artist,
+		track,
+		views
+	FROM spotify
+	WHERE artist = 'Gorillaz'
+		AND
+		most_played_on = 'Spotify'
+	ORDER BY stream DESC LIMIT 25;
+
+-- Before Optimization
+	--Planning Time: 0.360ms
+	--Execution Time: 10.921ms
+
+CREATE INDEX artist_idx ON spotify(artist);
+
+--After Optimization
+	--Planning Time: 0.434ms
+	--Execution Time: 0.573ms
+
+
+
+	
