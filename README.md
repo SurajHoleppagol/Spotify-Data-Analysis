@@ -254,9 +254,9 @@ ORDER BY energy_diff DESC;
 	FROM spotify
 ```	
 
-**Query Optimization Technique**
+## Query Optimization Technique
 
-- **To enhance query performance in the Spotify Data Analysis Project, we applied a systematic optimization process as outlined below:**
+- **To enhance query performance in the Spotify Data Analysis Project, applied a systematic optimization process as outlined below:**
 
 ```sql
 EXPLAIN ANALYZE
@@ -294,7 +294,7 @@ EXPLAIN ANALYZE
 
 - **2. Index Creation on the artist Column**
 
-	- **To optimize retrieval speed, we created an index on the artist column.**
+	- **To optimize retrieval speed,created an index on the artist column.**
 
 	- **Indexing allows the database to quickly locate rows without scanning the entire table.**
 
